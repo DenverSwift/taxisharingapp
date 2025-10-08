@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Мультипосилання — Figma і SharePoint</title>
+  <style>
+    :root{
+      --bg: #D4CFC2; /* фон */
+      --btn: #00533E; /* колір кнопок */
+      --radius: 12px;
+      --max-width: 520px;
+      --gap: 14px;
+      --shadow: 0 8px 24px rgba(0,0,0,0.08);
+      --accent: rgba(0,0,0,0.06);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+
+    html,body{
+      height:100%;
+      margin:0;
+      background: linear-gradient(180deg, var(--bg) 0%, #D8D3C9 100%);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      color: #0b2b22;
+    }
+
+    .wrap{
+      min-height:100%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:28px;
+    }
+
+    .card{
+      width:100%;
+      max-width:var(--max-width);
+      background: rgba(255,255,255,0.7);
+      border-radius: calc(var(--radius) + 4px);
+      box-shadow: var(--shadow);
+      padding:28px;
+      backdrop-filter: blur(6px);
+      border: 1px solid var(--accent);
+    }
+
+    .heading{
+      display:flex;
+      gap:12px;
+      align-items:center;
+      margin:0 0 12px 0;
+    }
+
+    .title{
+      font-size:18px;
+      font-weight:600;
+      letter-spacing: -0.2px;
+    }
+
+    .desc{
+      margin:0 0 18px 0;
+      color: #123833;
+      opacity:0.9;
+      font-size:14px;
+      line-height:1.35;
+    }
+
+    .links{
+      display:flex;
+      gap:var(--gap);
+      flex-wrap:wrap;
+    }
+
+    .link-btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-width:160px;
+      padding:12px 18px;
+      border-radius:10px;
+      text-decoration:none;
+      font-weight:600;
+      letter-spacing:0.2px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+      transition: transform .14s ease, box-shadow .14s ease;
+      border: 2px solid transparent;
+      background: var(--btn);
+      color: #ffffff;
+      cursor:pointer;
+    }
+
+    .link-btn:hover{
+      transform: translateY(-4px);
+      box-shadow: 0 14px 36px rgba(0,0,0,0.12);
+    }
+
+    .link-btn:active{ transform: translateY(-1px); }
+
+    /* Адаптив */
+    @media (max-width:480px){
+      .link-btn{ min-width:140px; padding:10px 14px; }
+      .card{ padding:18px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card" role="region" aria-label="Мультипосилання">
+      <div class="heading">
+        <h1 class="title">Мультипосилання</h1>
+      </div>
+      <p class="desc">Натисніть на відповідну кнопку, щоб відкрити ресурс</p>
+
+      <div class="links">
+        <a class="link-btn" href="https://www.figma.com/board/ssDHhWDOQbUHRbcv8j2B91/User-Journey-Map--Community-?node-id=0-1&p=f&t=N8KgaUCSLJS02k4c-0" target="_blank" rel="noopener noreferrer">Figma</a>
+        <a class="link-btn" href="https://epam-my.sharepoint.com/personal/vladyslav_mikhno_epam_com/_layouts/15/Doc.aspx?sourcedoc=%7Be67af054-5513-456a-9071-c9af6074a3ce%7D&action=edit&wd=target%28Name4.one%7Cf4f884d2-50bc-4598-9093-d107c9bf260f%2FBusiness%20Rules%20for%20TaxiSharing%7Ced13470d-86d3-47f1-a81d-3295e4676f84%2F%29&wdorigin=NavigationUrl" rel="noopener noreferrer">SharePoint</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
